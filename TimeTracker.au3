@@ -1,5 +1,5 @@
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
-#AutoIt3Wrapper_Icon=..\..\..\OneDrive\Pictures\TimeTracker.ico
+#AutoIt3Wrapper_Icon=..\..\..\desk\one\Pictures\TimeTracker.ico
 #AutoIt3Wrapper_UseX64=y
 #AutoIt3Wrapper_Res_SaveSource=y
 #AutoIt3Wrapper_Res_Language=1033
@@ -57,6 +57,8 @@ While 1
 	$x = Int(Stopwatch() / 100)
 	$nMsg = GUIGetMsg()
 	Switch $nMsg
+		Case $GUI_EVENT_PRIMARYDOWN
+			ToolTip("")
 		Case $GUI_EVENT_CLOSE
 			If _GUICtrlListView_GetItemCount ( $ListView1 ) > 0 Then
 				If Not IsDeclared("iMsgBoxAnswer") Then Local $iMsgBoxAnswer
